@@ -6,7 +6,7 @@
 /*   By: lgasqui <lgasqui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 12:24:19 by lgasqui           #+#    #+#             */
-/*   Updated: 2024/12/05 14:49:05 by lgasqui          ###   ########.fr       */
+/*   Updated: 2024/12/05 15:16:58 by lgasqui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	main(int argc, char **argv)
 		{
 			for (int j = 0; argv[i][j]; j++)
 			{
-				std::cout << (char)toupper(argv[i][j]);
+				std::cout << static_cast<char>(toupper(argv[i][j]));
 			}
 			if(argv[i + 1])
 				std::cout << " ";
