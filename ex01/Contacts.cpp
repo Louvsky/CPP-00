@@ -6,7 +6,7 @@
 /*   By: lgasqui <lgasqui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 10:01:10 by lgasqui           #+#    #+#             */
-/*   Updated: 2024/12/05 11:24:02 by lgasqui          ###   ########.fr       */
+/*   Updated: 2024/12/05 15:14:54 by lgasqui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,21 @@ void Contacts::first_name_input()
 	{
 		std::cout << "First Name :";
 		std::getline (std::cin, FirstName);
+        bool valid = true;
+        for (std::string::size_type i = 0; i < FirstName.length(); ++i)
+        {
+            if (!std::isprint(FirstName[i]))
+            {
+                valid = false;
+                break;
+            }
+        }
+
+        if (!valid)
+        {
+            std::cout << "Error: Firstname contains non-printable characters.\n";
+            FirstName.clear(); // Réinitialise NickName pour forcer un nouvel essai
+        }
 	}
 }
 void Contacts::last_name_input()
@@ -37,6 +52,21 @@ void Contacts::last_name_input()
 	{
 		std::cout << "Last Name :";
 		std::getline (std::cin, LastName);
+        bool valid = true;
+        for (std::string::size_type i = 0; i < LastName.length(); ++i)
+        {
+            if (!std::isprint(LastName[i]))
+            {
+                valid = false;
+                break;
+            }
+        }
+
+        if (!valid)
+        {
+            std::cout << "Error: Lastname contains non-printable characters.\n";
+            LastName.clear(); // Réinitialise NickName pour forcer un nouvel essai
+        }
 	}
 }
 void Contacts::nick_name_input()
@@ -45,6 +75,21 @@ void Contacts::nick_name_input()
 	{
 		std::cout << "Nick Name :";
 		std::getline (std::cin, NickName);
+        bool valid = true;
+        for (std::string::size_type i = 0; i < NickName.length(); ++i)
+        {
+            if (!std::isprint(NickName[i]))
+            {
+                valid = false;
+                break;
+            }
+        }
+
+        if (!valid)
+        {
+            std::cout << "Error: Nickname contains non-printable characters.\n";
+            NickName.clear(); // Réinitialise NickName pour forcer un nouvel essai
+        }
 	}
 }
 
@@ -86,6 +131,21 @@ void Contacts::darkest_secret_input()
 	{
 		std::cout << "Darkest Secret :";
 		std::getline (std::cin, DarkestSecret);
+        bool valid = true;
+        for (std::string::size_type i = 0; i < DarkestSecret.length(); ++i)
+        {
+            if (!std::isprint(DarkestSecret[i]))
+            {
+                valid = false;
+                break;
+            }
+        }
+
+        if (!valid)
+        {
+            std::cout << "Error: Darkest Secret contains non-printable characters.\n";
+            DarkestSecret.clear(); // Réinitialise NickName pour forcer un nouvel essai
+        }
 	}
 }
 

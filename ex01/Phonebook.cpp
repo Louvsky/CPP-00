@@ -6,7 +6,7 @@
 /*   By: lgasqui <lgasqui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 10:01:19 by lgasqui           #+#    #+#             */
-/*   Updated: 2024/12/05 14:38:13 by lgasqui          ###   ########.fr       */
+/*   Updated: 2024/12/05 15:02:20 by lgasqui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ Phonebook::~Phonebook(void)
 void Phonebook::addContact()
 {
     static int index = 0;
-    
-    printf("INDEX4 : [%d], TOTAL CONTACTS4 : [%d]", index, total_contacts);
     
     contacts[index].setFirstName("");
     contacts[index].first_name_input();
@@ -57,9 +55,6 @@ void Phonebook::addContact()
         }
         index++;
     }
-    
-    printf("INDEX : [%d], TOTAL CONTACTS : [%d]", index, total_contacts);
-
 }
 
 
