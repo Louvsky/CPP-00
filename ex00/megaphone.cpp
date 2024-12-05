@@ -6,7 +6,7 @@
 /*   By: lgasqui <lgasqui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 12:24:19 by lgasqui           #+#    #+#             */
-/*   Updated: 2024/11/05 09:26:36 by lgasqui          ###   ########.fr       */
+/*   Updated: 2024/12/05 14:49:05 by lgasqui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,8 @@ int	main(int argc, char **argv)
 			if(argv[i + 1])
 				std::cout << " ";
 		}
-		
+		std::cout << std::endl;	
 	}
 	
-	std::cout << std::endl;
 	return 0;
 } 
